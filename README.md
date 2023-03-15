@@ -1,2 +1,2 @@
 # ZeroIdea
-Educational Support service modified by me
+Educational Support service
