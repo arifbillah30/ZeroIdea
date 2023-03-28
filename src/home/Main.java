@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package home;
 
 import javafx.application.Application;
@@ -10,6 +5,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -21,11 +17,10 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
-//we gonna remove the borderless thingie.  
+
         stage.initStyle(StageStyle.DECORATED);
         stage.setMaximized(false);
 
-        //grab your root here
         root.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -34,8 +29,6 @@ public class Main extends Application {
             }
         });
 
-        //sorry about that - Windows defender issue.
-        //move around here
         root.setOnMouseDragged(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -43,6 +36,10 @@ public class Main extends Application {
                 stage.setY(event.getScreenY() - yOffset);
             }
         });
+
+        //stage.getIcons().add(new Image("../images/learning.png"));
+
+        stage.setTitle("Educational Support service");
 
         Scene scene = new Scene(root);
         stage.setScene(scene);

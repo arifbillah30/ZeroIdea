@@ -11,13 +11,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="854.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="854.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Login">
     <children>
         <AnchorPane prefHeight="503.0" prefWidth="382.0" style="-fx-background-color: #0C39FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                 <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="166.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../images/icons8_Google_Wallet_50px.png" />
+                        <Image url="@../images/Google_Wallet_50px.png" />
                     </image>
                 </ImageView>
                 <Label alignment="CENTER" layoutX="105.0" layoutY="262.0" prefHeight="23.0" prefWidth="173.0" text="E-Support Service" textFill="WHITE">
@@ -46,12 +46,12 @@
                     <graphic>
                         <ImageView fitHeight="16.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../images/icons8_Facebook_F_48px.png" />
+                                <Image url="@../images/fb.png" />
                             </image>
                         </ImageView>
                     </graphic>
                 </Button>
-                <Button fx:id="btnSignup" layoutX="4.0" layoutY="296.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="275.0" stylesheets="@../css/style.css" text="Sign up" />
+                <Button layoutX="4.0" layoutY="296.0" mnemonicParsing="false" onAction="#Signup" prefHeight="34.0" prefWidth="275.0" stylesheets="@../css/style.css" text="Sign up" />
                 <Separator layoutX="8.0" layoutY="190.0" prefHeight="7.0" prefWidth="275.0" />
                 <Label alignment="CENTER" layoutX="126.0" layoutY="179.0" prefHeight="23.0" prefWidth="31.0" style="-fx-background-color: #fff;" text="Or" textFill="#5b5a5a">
                     <font>
@@ -73,7 +73,7 @@
         </Pane>
         <ImageView fitHeight="43.0" fitWidth="45.0" layoutX="394.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../images/icons8_XING_100px.png" />
+                <Image url="@../images/logo_100px.png" />
             </image>
         </ImageView>
     </children>

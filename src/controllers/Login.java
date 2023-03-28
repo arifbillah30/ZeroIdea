@@ -1,10 +1,5 @@
 package controllers;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -12,12 +7,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-
 import includes.dbconnect;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -26,11 +22,29 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-/**
- *
- * @author oXCToo
- */
-public class LoginController implements Initializable {
+
+public class Login implements Initializable {
+
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+
+    public void Signup (ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/sign-up.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+    public void Login (ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
 
     @FXML
     private Label lblErrors;
@@ -57,12 +71,10 @@ public class LoginController implements Initializable {
             if (logIn().equals("Success")) {
                 try {
 
-                    //add you loading or delays - ;-)
                     Node node = (Node) event.getSource();
                     Stage stage = (Stage) node.getScene().getWindow();
-                    //stage.setMaximized(true);
                     stage.close();
-                    Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/fxml/OnBoard.fxml")));
+                    Scene scene = new Scene(FXMLLoader.load(getClass().getResource("../fxml/dashboard.fxml")));
                     stage.setScene(scene);
                     stage.show();
 
@@ -86,11 +98,10 @@ public class LoginController implements Initializable {
         }
     }
 
-    public LoginController() {
+    public Login() {
         con = dbconnect.conDB();
     }
 
-    //we gonna use string to check for status
     private String logIn() {
         String status = "Success";
         String email = txtUsername.getText();
@@ -99,8 +110,8 @@ public class LoginController implements Initializable {
             setLblError(Color.TOMATO, "Empty credentials");
             status = "Error";
         } else {
-            //query
-            String sql = "SELECT * FROM admins Where email = ? and password = ?";
+
+            String sql = "SELECT * FROM users Where email = ? and password = ?";
             try {
                 preparedStatement = con.prepareStatement(sql);
                 preparedStatement.setString(1, email);
