@@ -10,6 +10,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.sql.Connection;
+
 public class Main extends Application {
     private double xOffset = 0;
     private double yOffset = 0;
@@ -37,9 +39,9 @@ public class Main extends Application {
             }
         });
 
-        //stage.getIcons().add(new Image("../images/learning.png"));
+        stage.getIcons().add(new Image("images/learning.png"));
 
-        stage.setTitle("Educational Support service");
+        stage.setTitle("Educational Support Service");
 
         Scene scene = new Scene(root);
         stage.setScene(scene);

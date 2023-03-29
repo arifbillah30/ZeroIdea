@@ -9,13 +9,13 @@ public class dbconnect {
     public static Connection conDB()
     {
         try {
-            System.out.println("HI");
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/zeroidea", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/zero-idea", "root", "");
             System.out.println(con);
             return con;
 
         } catch (ClassNotFoundException | SQLException ex) {
+
             System.err.println("ConnectionUtil : "+ex.getMessage());
             return null;
         }
