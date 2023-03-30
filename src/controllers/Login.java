@@ -113,6 +113,7 @@ public class Login implements Initializable {
 
             String sql = "SELECT * FROM users Where email = ? and password = ?";
             try {
+
                 preparedStatement = con.prepareStatement(sql);
                 preparedStatement.setString(1, email);
                 preparedStatement.setString(2, password);

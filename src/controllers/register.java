@@ -1,12 +1,5 @@
 package controllers;
 
-import java.io.IOException;
-import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ResourceBundle;
 import includes.dbconnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,8 +15,16 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
 
-public class Login implements Initializable {
+
+public class register implements Initializable {
 
     private Stage stage;
     private Scene scene;
@@ -58,7 +59,7 @@ public class Login implements Initializable {
     @FXML
     private Button btnSignin;
 
-    /// -- 
+    /// --
     Connection con = null;
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
@@ -98,7 +99,7 @@ public class Login implements Initializable {
         }
     }
 
-    public Login() {
+    public register() {
         con = dbconnect.conDB();
     }
 
