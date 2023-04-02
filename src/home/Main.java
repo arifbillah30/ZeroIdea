@@ -1,55 +1,44 @@
 package home;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
-import java.sql.Connection;
+import java.io.IOException;
 
 public class Main extends Application {
-    private double xOffset = 0;
-    private double yOffset = 0;
 
+    public String dashboard="/fxml/dashboard.fxml";
+    public static Stage myStage;
     @Override
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
+    public void start(Stage stage) throws IOException {
+        System.out.println(dashboard);
 
-        stage.initStyle(StageStyle.DECORATED);
-        stage.setMaximized(false);
+        Parent root = FXMLLoader.load(getClass().getResource(dashboard));
 
-        root.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                xOffset = event.getSceneX();
-                yOffset = event.getSceneY();
-            }
-        });
+        Scene scene = new Scene(root, 1000, 600);
 
-        root.setOnMouseDragged(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                stage.setX(event.getScreenX() - xOffset);
-                stage.setY(event.getScreenY() - yOffset);
-            }
-        });
+        myStage=stage;
+        myStage.setTitle("E-help");
+        myStage.setScene(scene);
+        myStage.show();
+//we gonna remove the borderless thingie.
 
-        stage.getIcons().add(new Image("images/learning.png"));
 
-        stage.setTitle("Educational Support Service");
-
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+//        Scene scene = new Scene(root);
+//        stage.setScene(scene);
+//        stage.show();
+    }
+    public Main(){}
+    public Main(String dashboard) {
+        this.dashboard=dashboard;
     }
 
     public static void main(String[] args) {
-        launch(args);
-    }
 
+
+        launch();
+    }
 }
