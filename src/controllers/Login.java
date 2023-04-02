@@ -7,6 +7,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+
+import home.Main;
 import includes.dbconnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -31,19 +33,21 @@ public class Login implements Initializable {
 
     public void Signup (ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/sign-up.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        Main.myStage.setScene(new Scene(root, 1000, 600));
+        Main.myStage.show();
 
     }
     public void Login (ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+//        Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
+//        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+//        scene = new Scene(root);
+//        stage.setScene(scene);
+//        stage.show();
 
+//============>>>> Modify by Nanzil
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
+        Main.myStage.setScene(new Scene(root, 1000, 600));
+        Main.myStage.show();
     }
 
     @FXML

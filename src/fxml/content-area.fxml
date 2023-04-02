@@ -9,7 +9,7 @@
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" text="Welcome to E-learning hehe ha hu kichu parina" />
+            <Button fx:id="greetings" mnemonicParsing="false" text="Welcome to E-learning hehe ha hu kichu parina" />
          </children>
       </HBox>
       <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">

@@ -52,7 +52,7 @@
                 <Insets left="20.0" />
             </padding>
             <children>
-                <Label prefHeight="18.0" prefWidth="168.0" styleClass="sidebar-user-btn" stylesheets="@../css/style.css" text="Course">
+                <Label fx:id="course" onMouseClicked="#gotoCourse" prefHeight="18.0" prefWidth="168.0" styleClass="sidebar-user-btn" stylesheets="@../css/style.css" text="Course">
                     <HBox.margin>
                         <Insets left="15.0" />
                     </HBox.margin>
