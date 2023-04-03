@@ -40,6 +40,11 @@
                 <Insets left="20.0" />
             </padding>
             <children>
+            <ImageView fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/home.jpeg" />
+               </image>
+            </ImageView>
                 <Label prefHeight="18.0" prefWidth="168.0" styleClass="sidebar-user-btn" stylesheets="@../css/style.css" text="Home">
                     <HBox.margin>
                         <Insets left="15.0" />
@@ -52,7 +57,12 @@
                 <Insets left="20.0" />
             </padding>
             <children>
-                <Label fx:id="course" onMouseClicked="#gotoCourse" prefHeight="18.0" prefWidth="168.0" styleClass="sidebar-user-btn" stylesheets="@../css/style.css" text="Course">
+            <ImageView fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/course.png" />
+               </image>
+            </ImageView>
+                <Label fx:id="course" onMouseClicked="#gotoCourse" prefHeight="18.0" prefWidth="126.0" styleClass="sidebar-user-btn" stylesheets="@../css/style.css" text="Course">
                     <HBox.margin>
                         <Insets left="15.0" />
                     </HBox.margin>
@@ -64,6 +74,11 @@
                 <Insets left="20.0" />
             </padding>
             <children>
+            <ImageView fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/discussion.png" />
+               </image>
+            </ImageView>
                 <Label prefHeight="18.0" prefWidth="168.0" styleClass="sidebar-user-btn" stylesheets="@../css/style.css" text="Discussion">
                     <HBox.margin>
                         <Insets left="15.0" />
@@ -76,6 +91,11 @@
                 <Insets left="20.0" />
             </padding>
             <children>
+            <ImageView fitHeight="41.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/contact.jpg" />
+               </image>
+            </ImageView>
                 <Label prefHeight="18.0" prefWidth="168.0" styleClass="sidebar-user-btn" stylesheets="@../css/style.css" text="Contact">
                     <HBox.margin>
                         <Insets left="15.0" />

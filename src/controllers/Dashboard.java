@@ -43,5 +43,9 @@ public class DashBoard {
         Sidebar sidebarController = section3Loader.getController();
 
     }
+
+    public void setSection1Loader(FXMLLoader newLoader) {
+        section1Loader = newLoader;
+    }
 }
 
