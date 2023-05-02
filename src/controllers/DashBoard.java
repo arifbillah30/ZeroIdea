@@ -23,8 +23,6 @@ public class DashBoard {
 
 
 
-    public DashBoard() {
-    }
 
     public void initialize() throws IOException {
         // Load first section's FXML file and set it to the center region of the BorderPane
